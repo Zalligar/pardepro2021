@@ -1,0 +1,24 @@
+table.center{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+}
+
+table {width: 95%; class="center"}
+
+table, th, td{
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+
+th,td{
+  text-align: center;
+  color: white;
+}
+
+body {background-color: black;}
+
+img{
+  text-align: center;
+  width: 200px;
+}
