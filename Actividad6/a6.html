@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      body {background-color: black}
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+  </head>
+
+  <body>
+    <img src="imgs/focoOff.png" id="foco" onclick="switchImg()">
+    <script>
+      const switchImg= () =>{
+        let foco = document.getElementById("foco");
+        if (foco.src.match("focoOff")){
+          foco.src = "imgs/focoOn.png"
+        }else {
+          foco.src = "imgs/focoOff.png"
+        }
+      }
+    </script>
+
+  </body>
+</html>
