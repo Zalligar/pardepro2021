@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hola :)</title>
+  </head>
+  <body>
+    <p>Ingresa tus datos:</p>
+    <p>Nombre:</p>
+    <input type="text" id="name">
+    <p>Género:</p>
+    <select id="gender">
+      <option value=1>Masculino</option>
+      <option value=2>Femenino</option>
+      <option value=3>No binarix</option>
+    </select>
+    <button onclick="greeting();">Enviar :)</button>
+    <p id="msg"></p>
+
+    <script type="text/javascript">
+      const greeting = () =>{
+        let theName = document.getElementById('name').value;
+        let theGender = document.getElementById('gender').value;
+        let theMsg = "";
+
+        switch (gender) {
+          case '1':
+            theMsg = `Bienvenido ${name}`
+            break;
+          case '2':
+            theMsg = `Bienvenida ${name}`
+            break;
+          case '3':
+            theMsg = `Bienvenidx ${name}`
+            break;
+        }
+        document.getElementById('msg').innerHTML = theMsg;
+      }
+    </script>
+
+  </body>
+</html>
