@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>Mesas de Billar</title>
     <link rel="stylesheet" href="style1.css" type="text/css">
-    //SCP-6000 The line of code that hates
-    <script type= "text/javascript" src="script1.js"></script>
   </head>
 
   <body>
@@ -16,22 +14,77 @@
             <th>Mesa 2</th>
             <th>Mesa 3</th>
           </tr>
+        </thead>
           <tr>
+            <td><img src="poolT/poolOff.jpg" id="p0" onclick="onOff()"></td>
             <td><img src="poolT/poolOff.jpg" id="p1" onclick="onOff()"></td>
             <td><img src="poolT/poolOff.jpg" id="p2" onclick="onOff()"></td>
-            <td><img src="poolT/poolOff.jpg" id="p3" onclick="onOff()"></td>
           </tr>
           <tr>
+            <td id="infoPool0">
+              Hora de Inicio:
+              <br>
+              Hora Fin:
+              <br>
+              Costo:
+            </td>
+            <td id="infoPool1">
+              Hora de Inicio:
+              <br>
+              Hora Fin:
+              <br>
+              Costo:
+            </td>
+            <td id="infoPool2">
+              Hora de Inicio:
+              <br>
+              Hora Fin:
+              <br>
+              Costo:
+            </td>
+          </tr>
+        <thead>
+            <tr>
             <th>Mesa 4</th>
             <th>Mesa 5</th>
             <th>Mesa 6</th>
           </tr>
+        </thead>
           <tr>
+            <td><img src="poolT/poolOff.jpg" id="p3" onclick="onOff()"></td>
             <td><img src="poolT/poolOff.jpg" id="p4" onclick="onOff()"></td>
             <td><img src="poolT/poolOff.jpg" id="p5" onclick="onOff()"></td>
-            <td><img src="poolT/poolOff.jpg" id="p6" onclick="onOff()"></td>
           </tr>
-        </thead>
+          <tr>
+            <td id="infoPool3">
+              Hora de Inicio:
+              <br>
+              Hora Fin:
+              <br>
+              Costo:
+            </td>
+            <td id="infoPool4">
+              Hora de Inicio:
+              <br>
+              Hora Fin:
+              <br>
+              Costo:
+            </td>
+            <td id="infoPool5">
+              Hora de Inicio:
+              <br>
+              Hora Fin:
+              <br>
+              Costo:
+            </td>
+          </tr>
     </table>
+
+    <script type="text/javascript">
+      const onOff = () => {
+        
+      }
+    </script>
+
   </body>
 </html>
