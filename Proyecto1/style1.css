@@ -1,22 +1,25 @@
-table.center{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-}
-
-table {width: 95%; class="center"}
-
 table, th, td{
   border: 2px solid white;
   border-collapse: collapse;
 }
 
-th,td{
-  text-align: center;
-  color: white;
+table{width: 95%}
+
+table.center{
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body {background-color: black;}
+th,td,p{
+  text-align: center;
+  color: White;
+  font-family : Verdana, Arial, Helvetica;
+  font-size : 11pt;
+}
+
+body {
+  background-image: url(https://cdn.shopify.com/s/files/1/0096/5414/0990/products/Damascus_Navy1__36127_600x.jpg?v=1568788207);
+}
 
 img{
   text-align: center;

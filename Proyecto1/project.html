@@ -5,13 +5,14 @@
     <title>Mesas de Billar</title>
     <link rel="stylesheet" href="style1.css" type="text/css">
     <script type="text/javascript">
-      const onOff = (id, start, final) => {
+      const onOff = (id, start, final,charge) => {
         if(id.src.match("poolT/poolOff.jpg")){
           id.src = "poolT/poolOn.jpg"
           theTime(start);
         }else{
           id.src = "poolT/poolOff.jpg"
           theTime(final);
+          charge.innerHTML = theCheck(start, final, charge);
         }
       }
 
@@ -19,12 +20,6 @@
         clock = new Date()
         hour = clock.getHours()
         minute = clock.getMinutes()
-        second = clock.getSeconds()
-
-        str_second = new String(second)
-        if(str_second.length == 1){
-          second = "0" + second
-        }
 
         str_minute = new String(minute)
         if(str_minute.length == 1){
@@ -35,14 +30,36 @@
         if(str_hour.length == 1){
           hour = "0" + hour
         }
+        snap.innerHTML = hour + " : " + minute;
+      }
 
-        snap.innerHTML = hour + " : " + minute + " : " + second;
+      const theCheck = (start, final, charge) =>{
+        var sHour = start.innerHTML.toString().substring(0,2);
+        var sMin = start.innerHTML.toString().substring(3,5);
+        var fHour = final.innerHTML.toString().substring(0,2);
+        var fMin = final.innerHTML.toString().substring(3,5);
+        var ppHr = (fHour-sHour)*50;
+        var ppMin = 0;
+
+        if(fMin > sMin){
+          ppMin = fMin-sMin;
+        }else if (fMin < sMin) {
+          if((fHour-sHour)==1){
+            ppHr = 0;
+          }
+          var minToHr = 60-fMin;
+          ppMin = parseInt(minToHr)+parseInt(sMin);
+        }
+        var priceMin = (50/60)*ppMin;
+        var total = parseFloat(priceMin)+parseFloat(ppHr);
+        total = total.toFixed(2)
+        return "$"+total;
       }
     </script>
   </head>
 
   <body>
-    <table>
+    <table class="center">
         <thead>
           <tr>
             <th>Mesa 1</th>
