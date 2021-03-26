@@ -4,6 +4,41 @@
     <meta charset="utf-8">
     <title>Mesas de Billar</title>
     <link rel="stylesheet" href="style1.css" type="text/css">
+    <script type="text/javascript">
+      const onOff = (id, start, final) => {
+        if(id.src.match("poolT/poolOff.jpg")){
+          id.src = "poolT/poolOn.jpg"
+          theTime(start);
+        }else{
+          id.src = "poolT/poolOff.jpg"
+          theTime(final);
+        }
+      }
+
+      const theTime = (snap) =>{
+        clock = new Date()
+        hour = clock.getHours()
+        minute = clock.getMinutes()
+        second = clock.getSeconds()
+
+        str_second = new String(second)
+        if(str_second.length == 1){
+          second = "0" + second
+        }
+
+        str_minute = new String(minute)
+        if(str_minute.length == 1){
+          minute = "0" + minute
+        }
+
+        str_hour = new String(hour)
+        if(str_hour.length == 1){
+          hour = "0" + hour
+        }
+
+        snap.innerHTML = hour + " : " + minute + " : " + second;
+      }
+    </script>
   </head>
 
   <body>
@@ -16,31 +51,25 @@
           </tr>
         </thead>
           <tr>
-            <td><img src="poolT/poolOff.jpg" id="p0" onclick="onOff()"></td>
-            <td><img src="poolT/poolOff.jpg" id="p1" onclick="onOff()"></td>
-            <td><img src="poolT/poolOff.jpg" id="p2" onclick="onOff()"></td>
+            <td><img src="poolT/poolOff.jpg" id="p0" onclick="onOff(p0, start0, final0, charge0)"></td>
+            <td><img src="poolT/poolOff.jpg" id="p1" onclick="onOff(p1, start1, final1, charge1)"></td>
+            <td><img src="poolT/poolOff.jpg" id="p2" onclick="onOff(p2, start2, final2, charge2)"></td>
           </tr>
           <tr>
             <td id="infoPool0">
-              Hora de Inicio:
-              <br>
-              Hora Fin:
-              <br>
-              Costo:
+              Hora de inicio: <p id="start0"></p>
+              Hora final: <p id="final0"></p>
+              Costo: <p id="charge0"></p>
             </td>
             <td id="infoPool1">
-              Hora de Inicio:
-              <br>
-              Hora Fin:
-              <br>
-              Costo:
+              Hora de inicio: <p id="start1"></p>
+              Hora final: <p id="final1"></p>
+              Costo: <p id="charge1"></p>
             </td>
             <td id="infoPool2">
-              Hora de Inicio:
-              <br>
-              Hora Fin:
-              <br>
-              Costo:
+              Hora de inicio: <p id="start2"></p>
+              Hora final: <p id="final2"></p>
+              Costo: <p id="charge2"></p>
             </td>
           </tr>
         <thead>
@@ -51,40 +80,27 @@
           </tr>
         </thead>
           <tr>
-            <td><img src="poolT/poolOff.jpg" id="p3" onclick="onOff()"></td>
-            <td><img src="poolT/poolOff.jpg" id="p4" onclick="onOff()"></td>
-            <td><img src="poolT/poolOff.jpg" id="p5" onclick="onOff()"></td>
+            <td><img src="poolT/poolOff.jpg" id="p3" onclick="onOff(p3, start3, final3, charge3)"></td>
+            <td><img src="poolT/poolOff.jpg" id="p4" onclick="onOff(p4, start4, final4, charge4)"></td>
+            <td><img src="poolT/poolOff.jpg" id="p5" onclick="onOff(p5, start5, final5, charge5)"></td>
           </tr>
           <tr>
             <td id="infoPool3">
-              Hora de Inicio:
-              <br>
-              Hora Fin:
-              <br>
-              Costo:
+              Hora de inicio: <p id="start3"></p>
+              Hora final: <p id="final3"></p>
+              Costo: <p id="charge3"></p>
             </td>
             <td id="infoPool4">
-              Hora de Inicio:
-              <br>
-              Hora Fin:
-              <br>
-              Costo:
+              Hora de inicio: <p id="start4"></p>
+              Hora final: <p id="final4"></p>
+              Costo: <p id="charge4"></p>
             </td>
             <td id="infoPool5">
-              Hora de Inicio:
-              <br>
-              Hora Fin:
-              <br>
-              Costo:
+              Hora de inicio: <p id="start5"></p>
+              Hora final: <p id="final5"></p>
+              Costo: <p id="charge5"></p>
             </td>
           </tr>
     </table>
-
-    <script type="text/javascript">
-      const onOff = () => {
-        
-      }
-    </script>
-
   </body>
 </html>
